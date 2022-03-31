@@ -2,7 +2,7 @@ import {mainPage} from '../modules/mainPage.js';
 import {loginPage} from '../modules/loginPage.js';
 import {URL, OK} from './consts.js';
 import {changeNavbarButton} from '../components/header/header.js';
-
+import { ajax } from './ajax.js';
 /**
  * @description Создаёт HTML Div с указанным HTML содержанием.
  * @param { string } html HTML содержание создаваемого элемента
@@ -21,7 +21,7 @@ export function createElementFromHTML(html) {
  * Иначе перенаправляет на страницу авторизации.
  */
 export function checkAuth() {
-  Ajax.getFetch({
+  ajax.getFetch({
     url: `${URL}/api/v1/checkAuth`,
   }).then((response) => {
     if (response && response.status === OK) {

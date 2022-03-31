@@ -1,6 +1,7 @@
 import {clearContent} from '../utils/contentManipulate.js';
 import {renderMovies} from '../components/movie/movie.js';
 import {URL} from '../utils/consts.js';
+import { ajax } from '../utils/ajax.js';
 
 /** @module moviesPage */
 
@@ -51,7 +52,7 @@ export function moviesPage(collectionNumber) {
 
   const collectionURL = URL + collectionAPI + collectionNumber;
 
-  Ajax.getFetch({url: collectionURL})
+  ajax.getFetch({url: collectionURL})
       .then(({status, parsedBody}) => {
         collectionTitle.textContent = parsedBody.title;
         moviesDescription.textContent = parsedBody.description;

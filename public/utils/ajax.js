@@ -5,7 +5,7 @@ import {OK, CREATED, AJAX_METHODS} from './consts.js';
  * Позволяет совершать GET и POST запросы,
  * защищённые при помощи CORS.
  */
-export class Ajax {
+class Ajax {
   /**
    * @param { Array } args Аргументы, с которыми будет отправлен GET-запрос
    * @return { Object } Ответ на запрос (полученный в виде json)
@@ -64,4 +64,5 @@ export class Ajax {
     });
   }
 }
-window.Ajax = new Ajax();
+export const ajax = new Ajax();
+//window.Ajax = new Ajax();

@@ -1,5 +1,6 @@
 import {createElementFromHTML} from '../../utils/utils.js';
 import {URL} from '../../utils/consts.js';
+import { ajax } from '../../utils/ajax.js';
 
 /**
  * @description Создаёт и прикрепляет к корню страницы навигационную панель, полученную при
@@ -20,7 +21,7 @@ export function changeNavbarButton() {
     navbarButton.href = '/logout';
     navbarButton.textContent = 'Выйти';
   } else {
-    Ajax.postFetch({
+    ajax.postFetch({
       url: `${URL}/api/v1/logout`,
     });
     navbarButton.dataset.section = 'login';

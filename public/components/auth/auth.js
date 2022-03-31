@@ -6,6 +6,7 @@ import {
   numberRegularCheck, englishRegularCheck, countRegularCheck,
   CREATED, OK, NOT_AUTHORIZED, FAILED_DEPENDENCY, russianRegularCheck, CONFLICT, BAD_REQUEST
 } from '../../utils/consts.js';
+import { ajax } from '../../utils/ajax.js';
 
 /**
  * @param { bool } isLogin - Является ли форма формой авторизации
@@ -300,7 +301,7 @@ export function loginSubmit(e) {
   }
   const email = document.forms.authForm.email.value.trim();
   const password = document.forms.authForm.password.value.trim();
-  Ajax.postFetch({
+  ajax.postFetch({
     url: `${URL}/api/v1/login`,
     body: { email: email, password: password },
   }).then((response) => {
@@ -333,7 +334,7 @@ export function signupSubmit(e) {
   const email = document.forms.authForm.email.value.trim();
   const password = document.forms.authForm.password.value.trim();
   const secondPassword = document.forms.authForm.repeatPassword.value.trim();
-  Ajax.postFetch({
+  ajax.postFetch({
     url: `${URL}/api/v1/signup`,
     body: { username: name, password: password, repeatpassword: secondPassword, email: email },
   }).then((response) => {
