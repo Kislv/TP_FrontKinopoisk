@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontend-park-mail-ru/sample-2022-1.git"
+    "url": "git+https://github.com/frontend-park-mail-ru/TP_FrontKinopoisk.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/frontend-park-mail-ru/sample-2022-1/issues"
+    "url": "https://github.com/frontend-park-mail-ru/TP_FrontKinopoisk/issues"
   },
-  "homepage": "https://github.com/frontend-park-mail-ru/sample-2022-1#readme",
+  "homepage": "https://github.com/frontend-park-mail-ru/TP_FrontKinopoisk#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
