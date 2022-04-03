@@ -65,7 +65,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: 22
-          password: ${{ secrets.PRIVATE_KEY }}
+          key: ${{ secrets.PRIVATE_KEY }}
           source: "build/*"
           target: "/home/ubuntu/deploy"
           strip_components: 1
