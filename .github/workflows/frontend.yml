@@ -60,7 +60,7 @@ jobs:
           name: build
 
       - name: Transfer build files to server
-        uses: appleboy/ssh-action@master
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
